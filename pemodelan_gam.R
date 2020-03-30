@@ -34,7 +34,8 @@ plot(tahun,harga)
 plot(mesin,harga)
 
 model.gam<-gam(harga~mesin+s(mileage)+s(tahun)
-               +factor(warna)+factor(transmisi)+factor(variant)+factor(merk))
+               +factor(variant)
+               )
 summary(model.gam)
 
 mean(model.gam$residuals)
